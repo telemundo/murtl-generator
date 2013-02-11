@@ -1,0 +1,19 @@
+{
+    "name": "telemundo/murtl-injector",
+    "description": "MURTL Injector is a tool to create rules in MURTL from flat files.",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Rodolfo Puig",
+            "email": "rpuig@7gstudios.com"
+        }
+    ],
+    "autoload": {
+        "psr-0": { "": "src/" }
+    },
+    "require": {
+        "php": ">=5.3.3",
+        "silex/silex": "1.0.*@dev"
+    },
+    "minimum-stability": "dev"
+}
