@@ -57,19 +57,21 @@ def main():
 
             hubregex = re.compile('^/([a-z0-9_\-]+)?/?$', re.IGNORECASE)
             if not hubregex.match(url):
+                #rules.append(create_rule(name + ' - Photo Gallery', options.base_domain + clean_url + '/photo_gallery/', options.mobile_domain + '/lib/redirect.php?hub=\\1&path=\\2/\\3/\\4', 'advanced', '#/([a-z0-9_\\-]+)/([a-z0-9_\\-]+)/([a-z0-9_\\-]+)/(.*)#i'))
+
                 rules.append(create_rule(name + ' - Articles', options.base_domain + clean_url + '/articles', options.mobile_domain + clean_url + '/articles'))
                 rules.append(create_rule(name + ' - Articles (DNR)', options.base_domain + clean_url + '/article', '3', 'passthru'))
-                #rules.append(create_rule(name + ' - Article', options.base_domain + clean_url + '/article/', options.mobile_domain + '/lib/redirect.php?hub=\\1&path=\\2/\\3/\\4', 'advanced', '#/([a-z0-9_\\-]+)/([a-z0-9_\\-]+)/([a-z0-9_\\-]+)/(.*)#i'))
-                rules.append(create_rule(name + ' - Article', options.base_domain + clean_url + '/article/', options.mobile_domain + '/\\1/\\2/\\3/\\4', 'advanced', '#/([a-z0-9_\\-]+)/([a-z0-9_\\-]+)/([a-z0-9_\\-]+)/(.*)#i'))
+                rules.append(create_rule(name + ' - Article', options.base_domain + clean_url + '/article/', options.mobile_domain + '/\\1/\\2', 'advanced', '#/([a-z0-9_]+)/(.*)#i'))
                 rules.append(create_rule(name + ' - Article (DNR)', options.base_domain + clean_url + '/article/', '3', 'passthru'))
                 rules.append(create_rule(name + ' - Photo Galleries', options.base_domain + clean_url + '/photos', options.mobile_domain + clean_url + '/photos', 'static'))
                 rules.append(create_rule(name + ' - Photo Galleries (DNR)', options.base_domain + clean_url + '/photos', '3', 'passthru'))
-                #rules.append(create_rule(name + ' - Photo Gallery', options.base_domain + clean_url + '/photo_gallery/', options.mobile_domain + '/lib/redirect.php?hub=\\1&path=\\2/\\3/\\4', 'advanced', '#/([a-z0-9_\\-]+)/([a-z0-9_\\-]+)/([a-z0-9_\\-]+)/(.*)#i'))
-                rules.append(create_rule(name + ' - Photo Gallery', options.base_domain + clean_url + '/photo_gallery/', options.mobile_domain + '/\\1/\\2/\\3/\\4', 'advanced', '#/([a-z0-9_\\-]+)/([a-z0-9_\\-]+)/([a-z0-9_\\-]+)/(.*)#i'))
+                rules.append(create_rule(name + ' - Photo Gallery', options.base_domain + clean_url + '/photo_gallery/', options.mobile_domain + '/\\1/\\2', 'advanced', '#/([a-z0-9_]+)/(.*)#i'))
                 rules.append(create_rule(name + ' - Photo Gallery (DNR)', options.base_domain + clean_url + '/photo_gallery/', '3', 'passthru'))
-                rules.append(create_rule(name + ' - Rankit', options.base_domain + clean_url + '/rankit/', options.mobile_domain + clean_url + '/rankits', 'static'))
+                rules.append(create_rule(name + ' - Rankit', options.base_domain + clean_url + '/rankit/', options.mobile_domain + '/\\1/\\2', 'advanced', '#/([a-z0-9_]+)/(.*)#i'))
                 rules.append(create_rule(name + ' - Rankit (DNR)', options.base_domain + clean_url + '/rankit/', '3', 'passthru'))
-                rules.append(create_rule(name + ' - Videos', options.base_domain + clean_url + '/videos', options.mobile_domain + clean_url + '/rankits', 'static'))
+                rules.append(create_rule(name + ' - Versus', options.base_domain + clean_url + '/versus/', options.mobile_domain + '/\\1/\\2', 'advanced', '#/([a-z0-9_]+)/(.*)#i'))
+                rules.append(create_rule(name + ' - Versus (DNR)', options.base_domain + clean_url + '/versus/', '3', 'passthru'))
+                rules.append(create_rule(name + ' - Videos', options.base_domain + clean_url + '/videos', options.mobile_domain + clean_url + '/videos', 'static'))
                 rules.append(create_rule(name + ' - Videos (DNR)', options.base_domain + clean_url + '/videos', '3', 'passthru'))
                 rules.append(create_rule(name + ' - Video Player SEO', options.base_domain + clean_url + '/video/', options.mobile_domain + clean_url + '/videos', 'static'))
                 rules.append(create_rule(name + ' - Video Player SEO (DNR)', options.base_domain + clean_url + '/video/', '3', 'passthru'))
@@ -99,8 +101,7 @@ def main():
                     print '[%s] %s' % (time.strftime('%Y-%m-%d %H:%M:%S'), rule)
     else:
         if options.verbosity >= 1 and not options.quiet:
-            print '[%s] WARNING: no rules created' % (time.strftime('%Y-%m-%d %H:%M:%S'))
+            print '[%s] WARNING: no rules to create' % (time.strftime('%Y-%m-%d %H:%M:%S'))
 
 if __name__ == '__main__':
     main()
-
