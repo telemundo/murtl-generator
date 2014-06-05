@@ -1,16 +1,12 @@
+# Script
+/*.txt
+
 # Eclipse IDE
 /.buildpath
 /.project
 /.idea/
 /.settings/
 /nbproject/
-
-# Symfony
-/vendor/
-
-# Dependencies
-/composer.phar
-/phpunit.phar
 
 # Folder view configuration files
 .DS_Store
