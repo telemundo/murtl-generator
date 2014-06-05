@@ -1,0 +1,2 @@
+Premios Billboard,/entretenimiento/premios_billboard,/billboard|/billboard2014
+Premios Billboard English,/entretenimiento/premios_billboard_english,

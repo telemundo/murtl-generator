@@ -1,0 +1,24 @@
+Premios Billboard	static	http://www.telemundo.com/entretenimiento/premios_billboard	http://movil.telemundo.com/entretenimiento/premios_billboard
+Premios Billboard (DNR)	passthru	http://www.telemundo.com/entretenimiento/premios_billboard	3
+Premios Billboard - Vanity	static	http://www.telemundo.com/billboard	http://movil.telemundo.com/entretenimiento/premios_billboard
+Premios Billboard - Vanity (DNR)	passthru	http://www.telemundo.com/billboard	3
+Premios Billboard - Vanity	static	http://www.telemundo.com/billboard2014	http://movil.telemundo.com/entretenimiento/premios_billboard
+Premios Billboard - Vanity (DNR)	passthru	http://www.telemundo.com/billboard2014	3
+Premios Billboard - Articles	static	http://www.telemundo.com/entretenimiento/premios_billboard/articles	http://movil.telemundo.com/entretenimiento/premios_billboard/articles
+Premios Billboard - Articles (DNR)	passthru	http://www.telemundo.com/entretenimiento/premios_billboard/article	3
+Premios Billboard - Article	advanced	http://www.telemundo.com/entretenimiento/premios_billboard/article/	http://movil.telemundo.com/\1/\2	#/([a-z0-9_]+)/(.*)#i
+Premios Billboard - Article (DNR)	passthru	http://www.telemundo.com/entretenimiento/premios_billboard/article/	3
+Premios Billboard - Photo Galleries	static	http://www.telemundo.com/entretenimiento/premios_billboard/photos	http://movil.telemundo.com/entretenimiento/premios_billboard/photos
+Premios Billboard - Photo Galleries (DNR)	passthru	http://www.telemundo.com/entretenimiento/premios_billboard/photos	3
+Premios Billboard - Photo Gallery	advanced	http://www.telemundo.com/entretenimiento/premios_billboard/photo_gallery/	http://movil.telemundo.com/\1/\2	#/([a-z0-9_]+)/(.*)#i
+Premios Billboard - Photo Gallery (DNR)	passthru	http://www.telemundo.com/entretenimiento/premios_billboard/photo_gallery/	3
+Premios Billboard - Rankit	advanced	http://www.telemundo.com/entretenimiento/premios_billboard/rankit/	http://movil.telemundo.com/\1/\2	#/([a-z0-9_]+)/(.*)#i
+Premios Billboard - Rankit (DNR)	passthru	http://www.telemundo.com/entretenimiento/premios_billboard/rankit/	3
+Premios Billboard - Versus	advanced	http://www.telemundo.com/entretenimiento/premios_billboard/versus/	http://movil.telemundo.com/\1/\2	#/([a-z0-9_]+)/(.*)#i
+Premios Billboard - Versus (DNR)	passthru	http://www.telemundo.com/entretenimiento/premios_billboard/versus/	3
+Premios Billboard - Videos	static	http://www.telemundo.com/entretenimiento/premios_billboard/videos	http://movil.telemundo.com/entretenimiento/premios_billboard/videos
+Premios Billboard - Videos (DNR)	passthru	http://www.telemundo.com/entretenimiento/premios_billboard/videos	3
+Premios Billboard - Video Player SEO	static	http://www.telemundo.com/entretenimiento/premios_billboard/video/	http://movil.telemundo.com/entretenimiento/premios_billboard/videos
+Premios Billboard - Video Player SEO (DNR)	passthru	http://www.telemundo.com/entretenimiento/premios_billboard/video/	3
+Premios Billboard - Video Player Legacy	static	http://www.telemundo.com/entretenimiento/premios_billboard/video_player	http://movil.telemundo.com/entretenimiento/premios_billboard/videos
+Premios Billboard - Video Player Legacy (DNR)	passthru	http://www.telemundo.com/entretenimiento/premios_billboard/video_player	3
